@@ -10,6 +10,10 @@ function Header(){
                     <button className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                         <Menu className='w-5 h-5' />
                     </button>
+
+                    <div className='hidden md:block'>
+                        <h1>Dashboard</h1>
+                    </div>
                 </div>
             </div>
         </div>

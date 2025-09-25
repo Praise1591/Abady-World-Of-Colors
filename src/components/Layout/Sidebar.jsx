@@ -36,4 +36,4 @@ function Sidebar(){
     );
 }
 
-export default sidebar;
+export default Sidebar;

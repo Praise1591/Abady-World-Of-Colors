@@ -104,7 +104,7 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }){
             {menuItems.map((item)=>{
                 return(
                     <div key={item.id}>
-                        <button className={'w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200'}>
+                        <button className={`w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 ${currentPage === item.id || item.active ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25' : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/50"}`}>
                             <div className='flex items-center space-x-3'>
                                 <item.icon className={'w-5 h-5'} />
                                 {/* Conditional Rendering */}
@@ -115,7 +115,7 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }){
                                             {item.badge}
                                          </span>
                                 )}
-                                {item.count && <span className='px-2 py-1 text-xs bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full'>{item.count}</span>}
+                                {item.count && <span className='px-2 py-1 text-xs bg-red-500 text-white rounded-full'>{item.count}</span>}
                                 </>
                             </div>
 

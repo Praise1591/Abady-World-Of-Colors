@@ -93,7 +93,7 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }){
 
                 {/* Conditional Rendering */}
                 <div>
-                    <h1 className="text-xl font-bold text-slate-800 dark:text-white">Nexus</h1>
+                    <h1 className="text-xl font-bold text-slate-800 dark:text-white">FIPL</h1>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Admin Panel</p>
                 </div>
             </div>

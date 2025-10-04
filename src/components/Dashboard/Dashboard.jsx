@@ -1,10 +1,11 @@
 import React from "react";
-import StatsGrid from './StatsGrid'
+import StatsGrid from './StatsGrid';
 
 function Dashboard(){
     return(
         <div className="space-y-6">
             {/* StatsGrid */}
+            <StatsGrid />
         </div>
     );
 }

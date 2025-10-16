@@ -8,7 +8,7 @@ function ChartSection(){
             <RevenueChart />
         </div>
         <div className="space-y-6">
-            <SalesCart />
+            
         </div>
     </div>
 }

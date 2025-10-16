@@ -1,6 +1,6 @@
 import React from "react";
-import { BarChart } from "lucide-react";
-import {Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, } from "lucide-react"
+import { BarChart, ResponsiveContainer } from "recharts";
+import {Bar, XAxis, YAxis, CartesianGrid,  Tooltip, } from "recharts"
 
 function RevenueChart(){
     const data = [
@@ -50,9 +50,9 @@ function RevenueChart(){
                 {" "}
                 <ResponsiveContainer width='100%' height='100%'>
                     <BarChart data ={data} margin={{top: 20, right: 30, left: 20, bottom: 5}}>
-                        <CartesianGrid stroke='#e238f8' opacity={0.3}/>
+                        <CartesianGrid strokeDasharray="3 3" stroke='#e238f8' opacity={0.3}/>
                         <XAxis dataKey='month' stroke='#64748b' fontSize={12} tickline={false} axisline={false}/>
-                        <YAxis stroke='#64748b' fontSize={12} tickline={false} axisline={false} tickFormatter={(value)=> `$${value / 1000}k`}/>
+                        <YAxis  stroke='#64748b' fontSize={12} tickline={false} axisline={false} tickFormatter={(value)=> `$${value / 1000}k`}/>
                         <Tooltip 
                         containerStyle={{
                             backgroundColor:"rgba(255, 255, 255, 0.95)",
@@ -60,7 +60,7 @@ function RevenueChart(){
                             borderRadius: "12px",
                             boxShadow:"0 10px 40px rgba(0, 0, 0, 0.1)",
                         }}
-                        formatter={(value) => [`$${value.totalString()}`, ""]}/>
+                        formatter={(value) => [`$${value.toLocalString()}`, ""]}/>
                         <Bar 
                             dataKey='revenue'
                             fill='url(#revenueGradient)'
@@ -68,11 +68,15 @@ function RevenueChart(){
                             maxBarSize={40}/>
                         <Bar 
                             dataKey='expenses'
-                            fill='url(#revenueGradient)'
+                            fill='url(#expensesGradient)'
                             radius={[4, 4, 0, 0]}
                             maxBarSize={40}/>
                         <defs>
                             <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#3b82f6"/>
+                                <stop offset="100%" stopColor="#8b5cf6"/>
+                            </linearGradient>
+                            <linearGradient id="expensesGradient" x1="0" y1="0" x2="0" y2="1">
                                 <stop offset="0%" stopColor="#94a3b8"/>
                                 <stop offset="100%" stopColor="#64748b"/>
                             </linearGradient>

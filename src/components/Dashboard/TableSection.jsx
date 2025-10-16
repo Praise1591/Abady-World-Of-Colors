@@ -2,6 +2,14 @@ import { MoreHorizontal } from "lucide-react";
 import React from "react";
 
 function TableSection(){
+    const getStatusColor = (status) => {
+        switch (status){
+            case `completed`:
+                return "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400";
+            case `pending`:
+                return "bg"
+        }
+    }
     return(
         <div className="space-y-6">
             <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-b-2xl border border-slate-200/50 dark:border-slate-700/50 overflow-hidden">

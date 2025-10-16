@@ -1,13 +1,14 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "lucide-react";
-const data =[
-    {name: "Electronics", value: 45, color: "#3b82f6"},
-    {name: "Clothing", value: 30, color: "#8b5cf6"},
-    {name: "Books", value: 15, color: "#10b981"},
-    {name: "Other", value: 45, color: "#3b82f6"},
-];
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+
 
 function SalesCart(){
+    const data =[
+        {name: "Electronics", value: 45, color: "#3b82f6"},
+        {name: "Clothing", value: 30, color: "#8b5cf6"},
+        {name: "Books", value: 15, color: "#10b981"},
+        {name: "Other", value: 45, color: "#3b82f6"},
+    ];
     return(
         <div className="bg-white dark:bg-slate-900 backdrop-blur-xl rounded-b-2xl p-6 border border-slate-200/50 dark:border-slate-700/50">
             <div className="mb-6">
@@ -27,7 +28,7 @@ function SalesCart(){
                             dataKey='value'
                             >
                             {data.map((empty, index)=>(
-                                <Cell key={`cell-${index}`} fill={entry.color}/>
+                                <Cell key={`cell-${index}`} fill={FileSystemEntry.color}/>
                             ))}
                         </Pie>
                         <Tooltip 

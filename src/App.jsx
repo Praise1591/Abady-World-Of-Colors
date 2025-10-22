@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
-import Sidebar from './components/Layout/Sidebar';
-import Header from './components/Layout/Header';
-import Dashboard from './components/Dashboard/Dashboard';
+import { useState } from 'react'
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contacts from './components/Contacts';
+import Further from './components/Further';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
-
-function App() {
-  const [sideBarCollapsed, setSideBarCollapsed] = useState(false);
-  const [currentPage, SetCurrentPage] = useState("dashboard");
-
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-all duration-500'>
-      <div className='flex h-screen overflow-hidden'>
-        <Sidebar 
-          collapsed= {sideBarCollapsed}
-          onToggle = {() => setSideBarCollapsed(sideBarCollapsed)}
-          currentPage = {currentPage}
-          onPageChange ={SetCurrentPage}
-          />
-        <div className='flex-1 flex flex-col overflow-hidden'>
-          <Header sidebarCollapsed={sideBarCollapsed} 
-          onToggleSidebar={()=>setSideBarCollapsed(!sideBarCollapsed)}/>
-          <main className='flex-1 overflow-y-auto bg-transparent'>
-            <div className='p-6 space-y-6'>
-              {currentPage === "dashboard" && <Dashboard />}
-            </div>
-          </main>
-        </div>
-      </div>
+function App(){
+  return(
+    <div className="w-full overflow-hidden">
+      <ToastContainer />
+      <Header />
+      <About />
+      <Projects />
+      <Contacts />
+      <Further />
     </div>
   );
 }
+
 
 export default App

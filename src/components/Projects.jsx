@@ -23,7 +23,7 @@ import { motion } from "framer-motion"
 const projectData = [
     {
         title: "Port-Harcourt",
-        image: Houseimage1
+        image: Houseimage16
     },
     {
         title: "Lagos",
@@ -31,7 +31,7 @@ const projectData = [
     },
     {
         title: "Bayelsa",
-        image: Houseimage16
+        image: Houseimage1
     },
     {
         title: "Lagos",

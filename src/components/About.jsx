@@ -19,7 +19,7 @@ function About(){
                 <div className="flex flex-col item-center md:items-start mt-10 text-gray-600">
                     <div className="grid grid-cols-2 gap-6 md:gap-10 w-full 2xl:pr-28">
                         <div>
-                            <p className="text-4xl font-medium text-gray-800">10+</p>
+                            <p className="text-4xl font-medium text-gray-800">9+</p>
                             <p>Years of Experience</p>
                         </div>
                         <div>
@@ -27,11 +27,11 @@ function About(){
                             <p>Projects Completed</p>
                         </div>
                         <div>
-                            <p className="text-4xl font-medium text-gray-800">20+</p>
-                            <p>Mn. Sq. Ft. Delivered</p>
+                            <p className="text-4xl font-medium text-gray-800">11+</p>
+                            <p>Consultation Services</p>
                         </div>
                         <div>
-                            <p className="text-4xl font-medium text-gray-800">25+</p>
+                            <p className="text-4xl font-medium text-gray-800">13+</p>
                             <p>Ongoing Projects</p>
                         </div>
                         <button className="bg-blue-600 text-white px-8 py-2 rounded text-center cursor-pointer" ><a href="/Business_Certificate.jpg" className="w-full sm:w-1/2 max-w-lg">Certification</a></button>
